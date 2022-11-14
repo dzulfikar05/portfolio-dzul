@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dzulfikar Muhammad Al Ghifari</title>
     <link href="dist/output.css" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -18,22 +18,22 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
-            const name = document.querySelector('#name').value;
-            const email = document.getElementById("email").value;
-            const subjek = document.getElementById("subjek").value;
-            const pesan = document.getElementById("pesan").value;
+            var name = $('#name').val();
+            var email = $("#email").val();
+            var subjek = $("#subjek").val();
+            var pesan = $("#pesan").val();
             document.getElementById('contact-form').addEventListener('submit', function(event) {
-                //    console.log(name);return;
+                //    console.log(this);return;
                 // alert(name); return;
-                // if(name == '' || email == '' || subjek == '' || pesan == ''){
-                //     Swal.fire({
-                //         confirmButtonColor: 'rgb(6 182 212)',
-                //         title: 'Warning!',
-                //         icon: 'warning',
-                //         text: 'Semua kolom harus di isi!.',
-                //         success:'error'
-                //     });  
-                // }
+                if(name == '' || email == '' || subjek == '' || pesan == ''){
+                    Swal.fire({
+                        confirmButtonColor: 'rgb(6 182 212)',
+                        title: 'Warning!',
+                        icon: 'warning',
+                        text: 'Semua kolom harus di isi!.',
+                        success:'error'
+                    });  
+                }
 
                 Swal.fire({
                     title: 'Are you sure?',
@@ -394,7 +394,7 @@
                         </div>
                         <div class="w-full mb-8 px-4">
                             <label for="email" class="text-base text-primary font-bold">Email</label>
-                            <input  type="email" name="email" id="email" required  class=" w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+                            <input  type="email" name="email" id="email"  class=" w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
                         </div>
                         <div class="w-full mb-8 px-4">
                             <label for="subjek" class="text-base text-primary font-bold">Subjek</label>
