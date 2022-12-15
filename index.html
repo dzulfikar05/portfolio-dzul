@@ -48,7 +48,7 @@
                                     text: 'Your have successfully sent the email.',
                                     success:'success'
                                 })
-                                $('#name, #email, #subjek').val('');
+                                $('#name, #email, #subjek, #pesan').val('');
                                 $('#pesan').html('');
                             }, function(error) {
                                 console.log('FAILED...', error);
@@ -61,7 +61,7 @@
                                     success:'error'
                                 })
 
-                                $('#name, #email, #subjek').val('');
+                                $('#name, #email, #subjek, #pesan').val('');
                                 $('#pesan').html('');
                             });
 
